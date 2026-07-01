@@ -1,0 +1,98 @@
+{
+  "expo": {
+    "name": "sleeptracker",
+    "slug": "sleeptracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A10"
+    },
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ercaap.sleeptracker",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app uses the microphone to detect snoring and sleep sounds for accurate sleep tracking.",
+        "NSLocationWhenInUseUsageDescription": "This app uses location to provide environment-based sleep insights.",
+        "UIBackgroundModes": [
+          "audio",
+          "background-processing",
+          "background-fetch"
+        ]
+      },
+      "userInterfaceStyle": "automatic",
+      "requireFullScreen": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.sleeptrackerai.app",
+      "versionCode": 1,
+      "permissions": [
+        "VIBRATE",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "WAKE_LOCK",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#6366f1",
+          "defaultChannel": "sleep-tracker",
+          "sounds": [
+            "./assets/sounds/alarm.wav",
+            "./assets/sounds/notification.wav"
+          ]
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/SpaceMono-Regular.ttf"
+          ]
+        }
+      ],
+      "expo-localization"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-project-id-here"
+      },
+      "firebaseApiKey": "REDACTED",
+      "firebaseAuthDomain": "sleep-tracker-ai-81098.firebaseapp.com",
+      "firebaseProjectId": "sleep-tracker-ai-81098",
+      "firebaseStorageBucket": "sleep-tracker-ai-81098.firebasestorage.app",
+      "firebaseMessagingSenderId": "136995770264",
+      "firebaseAppId": "1:136995770264:web:2784dbf8b704c10e35a5ed"
+    }
+  }
+}
